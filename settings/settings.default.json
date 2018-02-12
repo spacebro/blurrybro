@@ -1,0 +1,35 @@
+{
+  "server": {
+    "host": "localhost",
+    "port": 37200
+  },
+  "service": {
+    "spacebro":{
+      "host": "spacebro.space",
+      "port": 3333,
+      "channelName": "media-stream",
+      "client": {
+        "name": "blurrybro",
+        "description": "Blur images",
+				"in": {
+					"inMedia": {
+						"eventName": "inMedia",
+						"description": "Image to process",
+						"type": "all"
+					}
+        },
+        "out": {
+					"outMedia": {
+						"eventName": "outMedia",
+						"description": "processed image",
+						"type": "all"
+					}
+        }
+      }
+    }
+  },
+  "folder": {
+    "output": "/tmp/blurrybro/output",
+    "tmp": "/tmp/blurrybro/tmp"
+  }
+}
