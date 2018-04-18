@@ -24,6 +24,7 @@ spacebroClient.on(settings.service.spacebro.client.in.inMedia.eventName, media =
     .write(outImage, function (err) {
       if (!err) {
         spacebroClient.emit(settings.service.spacebro.client.out.outMedia.eventName, outMedia)
+        console.log('emit ' + JSON.stringify(outMedia, null, 2))
       } else console.log(err)
     })
   })
